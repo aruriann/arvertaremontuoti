@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arvertaremontuoti.lt/sitemap.xml

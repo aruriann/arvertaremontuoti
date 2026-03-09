@@ -1,0 +1,22 @@
+{
+  "name": "Ar verta remontuoti automobilį?",
+  "short_name": "Remontuoti?",
+  "description": "Greitai įvertinkite, ar automobilio remontas ekonomiškai apsimoka.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "lang": "lt",
+  "icons": [
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

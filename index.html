@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ar verta remontuoti automobilį? | Skaičiuoklė</title>
+  <meta name="description" content="Greitai įvertinkite, ar automobilio remontas ekonomiškai apsimoka. Skaičiuoklė atsižvelgia į vertę, remonto kainą, amžių, ridą ir riziką." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://arvertaremontuoti.lt/" />
+  <meta property="og:title"       content="Ar verta remontuoti automobilį? | Skaičiuoklė" />
+  <meta property="og:description" content="Greitai įvertinkite, ar automobilio remontas ekonomiškai apsimoka. Skaičiuoklė atsižvelgia į vertę, remonto kainą, amžių, ridą ir riziką." />
+  <meta property="og:image"       content="https://arvertaremontuoti.lt/og-preview.png" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Ar verta remontuoti automobilį? | Skaičiuoklė" />
+  <meta name="twitter:description" content="Greitai įvertinkite, ar automobilio remontas ekonomiškai apsimoka. Skaičiuoklė atsižvelgia į vertę, remonto kainą, amžių, ridą ir riziką." />
+  <meta name="twitter:image"       content="https://arvertaremontuoti.lt/og-preview.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://arvertaremontuoti.lt/" />
+
+  <!-- Favicon -->
+  <link rel="icon"             type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon"             type="image/png"    href="/favicon-32x32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                     href="/apple-touch-icon.png" />
+
+  <!-- PWA manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Schema.org FAQPage structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Kada dažniausiai neapsimoka remontuoti automobilio?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dažniausiai tada, kai remonto kaina sudaro didelę dalį automobilio vertės, o papildoma rizika (amžius, rida, gedimo tipas) yra didelė."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kiek verta investuoti į automobilio remontą?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Universalios ribos nėra, bet ekonomiškai dažnai saugiau, kai remontas sudaro mažesnę dalį automobilio vertės. Skaičiuoklė padeda tą ribą pamatyti jūsų situacijoje."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kodėl rezultatas keičiasi nuo amžiaus ar ridos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nes senesniems automobiliams su didele rida dažniau pasitaiko papildomų gedimų, todėl rizika, kad remontas brangs, yra didesnė."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ar verta remontuoti automobilį, jei planuoju jį parduoti greitai?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dažnai verta tik minimaliai: saugumo ir būtinus darbus. Didelės investicijos prieš greitą pardavimą retai atsiperka."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ką daryti, jei nežinau automobilio rinkos vertės?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Naudokite vertės helperį po \"Automobilio vertė\" lauku – įveskite markę, metus ir ridą, ir gausite orientacinę rinkos vertę. Arba palyginkite 3 panašius skelbimus ir naudokite medianą (vidurinę kainą)."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══ STICKY HEADER ═══ -->
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">🚗 Ar verta remontuoti?</a>
+    <nav class="main-nav">
+      <a href="#how" class="nav-link">Kaip veikia</a>
+      <a href="#examples" class="nav-link">Pavyzdžiai</a>
+      <a href="#faq" class="nav-link">DUK</a>
+      <a href="#calculator" class="btn-nav-cta" id="headerCta">Skaičiuoti</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <h1 class="hero-h1">Ar verta remontuoti automobilį?</h1>
+      <p class="hero-sub">Įveskite automobilio vertę ir remonto kainą – gausite aiškią ekonominę rekomendaciją. Skaičiuoklė taip pat įvertina riziką pagal amžių, ridą, gedimo tipą ir planuojamą naudojimą.</p>
+      <ul class="hero-bullets">
+        <li><span class="hero-check">✓</span> <strong>Aišku:</strong> rezultatas paaiškintas paprastai, su priežastimis.</li>
+        <li><span class="hero-check">✓</span> <strong>Praktiška:</strong> gausite konkrečius „ką daryti dabar" žingsnius.</li>
+        <li><span class="hero-check">✓</span> <strong>Patikrinta:</strong> skaičiavimai stabilūs (vidiniai testai).</li>
+      </ul>
+      <a href="#calculator" class="btn-hero">Pradėti skaičiuoti →</a>
+      <p class="hero-note">Orientacinis įrankis – sprendimui priimti rekomenduojame turėti bent 1–2 serviso sąmatas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CALCULATOR ═══ -->
+<section class="page-section bg-offset" id="calculator">
+  <div class="container">
+
+    <!-- FORM CARD -->
+    <div class="card">
+      <div class="section-title">Automobilio duomenys</div>
+      <form id="calcForm" novalidate autocomplete="off">
+        <div class="form-grid">
+
+          <div class="field">
+            <label for="carValue">Automobilio vertė <span class="unit">(€)</span></label>
+            <input type="number" id="carValue" placeholder="pvz. 4500" min="1" />
+            <span class="error-msg" id="err-carValue">Įveskite teigiamą skaičių</span>
+
+            <!-- VALUE HELPER -->
+            <div class="value-helper">
+              <button type="button" class="value-helper-toggle" id="valueHelperToggle"
+                      aria-expanded="false" aria-controls="valueHelperPanel">
+                <span class="vh-icon" aria-hidden="true">?</span>
+                Nežinote automobilio vertės?
+                <span class="vh-chevron" aria-hidden="true">▾</span>
+              </button>
+              <div class="value-helper-panel" id="valueHelperPanel" hidden>
+
+                <!-- Panel header -->
+                <div class="vh-header">
+                  <div class="vh-title">Greita apytikslė vertė</div>
+                  <p class="vh-subtitle">Įveskite pagrindinius automobilio duomenis ir gaukite orientacinę rinkos vertę.</p>
+                </div>
+
+                <!-- MODE 1: Quick estimate -->
+                <div class="vh-mode1">
+                  <div class="vh-estimate-grid">
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhMake">Markė</label>
+                      <select id="vhMake">
+                        <option value="">— pasirinkite —</option>
+                        <option value="alfa-romeo">Alfa Romeo</option>
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="chrysler">Chrysler</option>
+                        <option value="citroen">Citroën</option>
+                        <option value="dacia">Dacia</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="ford">Ford</option>
+                        <option value="honda">Honda</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="infiniti">Infiniti</option>
+                        <option value="jaguar">Jaguar</option>
+                        <option value="jeep">Jeep</option>
+                        <option value="kia">Kia</option>
+                        <option value="land-rover">Land Rover</option>
+                        <option value="lexus">Lexus</option>
+                        <option value="mazda">Mazda</option>
+                        <option value="mercedes-benz">Mercedes-Benz</option>
+                        <option value="mini">Mini</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                        <option value="nissan">Nissan</option>
+                        <option value="opel">Opel</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="porsche">Porsche</option>
+                        <option value="renault">Renault</option>
+                        <option value="saab">Saab</option>
+                        <option value="seat">SEAT</option>
+                        <option value="subaru">Subaru</option>
+                        <option value="suzuki">Suzuki</option>
+                        <option value="skoda">Škoda</option>
+                        <option value="tesla">Tesla</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="kita">Kita</option>
+                      </select>
+                      <span class="vh-err" id="vh-err-make"></span>
+                    </div>
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhModel">Modelis</label>
+                      <input type="text" id="vhModel" placeholder="pvz. Golf, Octavia" autocomplete="off" maxlength="40" />
+                      <span class="vh-err" id="vh-err-model"></span>
+                    </div>
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhYear">Pagaminimo metai</label>
+                      <input type="number" id="vhYear" placeholder="pvz. 2015" min="1990" max="2026" inputmode="numeric" />
+                      <span class="vh-err" id="vh-err-year"></span>
+                    </div>
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhMileage">Rida (km)</label>
+                      <input type="number" id="vhMileage" placeholder="pvz. 150000" min="0" max="999999" inputmode="numeric" />
+                      <span class="vh-err" id="vh-err-mile"></span>
+                    </div>
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhFuel">Kuras</label>
+                      <select id="vhFuel">
+                        <option value="" disabled selected>— pasirinkite —</option>
+                        <option value="petrol">Benzinas</option>
+                        <option value="diesel">Dyzelis</option>
+                        <option value="hybrid">Hibridas</option>
+                        <option value="electric">Elektra</option>
+                        <option value="lpg">Dujinė (LPG)</option>
+                      </select>
+                      <span class="vh-err" id="vh-err-fuel"></span>
+                    </div>
+                    <div class="field-sm">
+                      <label class="field-sm-label" for="vhTransmission">Pavarų dėžė</label>
+                      <select id="vhTransmission">
+                        <option value="" disabled selected>— pasirinkite —</option>
+                        <option value="manual">Mechaninė</option>
+                        <option value="auto">Automatinė</option>
+                      </select>
+                      <span class="vh-err" id="vh-err-trans"></span>
+                    </div>
+                  </div>
+                  <button type="button" class="btn-estimate" id="vhEstimateBtn">Apskaičiuoti apytikslę vertę</button>
+                  <div class="vh-estimate-result" id="vhEstimateResult" hidden>
+                    <div class="vher-main">Apytikslė vertė: <strong id="vhEstimateVal"></strong></div>
+                    <div class="vher-range">Rinkos intervalas: nuo <span id="vhEstimateLow"></span> iki <span id="vhEstimateHigh"></span></div>
+                    <p class="vher-note">Orientacinė vertė pagal vidutines rinkos tendencijas. Tikslesnei vertei palyginkite panašius skelbimus.</p>
+                    <button type="button" class="btn-use-value" id="useEstimateBtn">Naudoti šią vertę</button>
+                    <p class="vher-autofill-note">Užpildys automobilio vertę, amžių ir ridą skaičiuoklėje.</p>
+                  </div>
+                </div>
+
+                <!-- MODE 2: Listing refinement (collapsible, secondary) -->
+                <div class="vh-mode2">
+                  <button type="button" class="vh-mode2-toggle" id="vhMode2Toggle" aria-expanded="false" aria-controls="vhMode2Panel">
+                    <span class="vh-m2-arrow" aria-hidden="true">▶</span>
+                    Norite patikslinti pagal skelbimus?
+                  </button>
+                  <div id="vhMode2Panel" hidden>
+                    <p class="value-helper-intro">Įveskite 3 panašių skelbimų kainas – rekomenduojama vertė bus apskaičiuota pagal medianą.</p>
+                    <div class="value-helper-grid">
+                      <input type="text" inputmode="numeric" class="value-helper-input" id="listing1" placeholder="Skelbimas 1" />
+                      <input type="text" inputmode="numeric" class="value-helper-input" id="listing2" placeholder="Skelbimas 2" />
+                      <input type="text" inputmode="numeric" class="value-helper-input" id="listing3" placeholder="Skelbimas 3" />
+                    </div>
+                    <div class="value-helper-result" id="helperResult">Įveskite visas 3 kainas</div>
+                    <div class="value-helper-warning" id="helperWarning" hidden>Skelbimų kainos gana stipriai skiriasi – verta pažiūrėti dar kelis panašius skelbimus.</div>
+                    <button type="button" class="btn-use-value" id="useHelperValue" hidden>Naudoti šią vertę</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="repairCost">Remonto kaina <span class="unit">(€)</span></label>
+            <input type="number" id="repairCost" placeholder="pvz. 1200" min="1" />
+            <span class="error-msg" id="err-repairCost">Įveskite teigiamą skaičių</span>
+          </div>
+
+          <div class="field">
+            <label for="carAge">Automobilio amžius <span class="unit">(metais)</span></label>
+            <input type="number" id="carAge" placeholder="pvz. 12" min="0" max="40" />
+            <span class="error-msg" id="err-carAge">Įveskite 0–40 metų</span>
+          </div>
+
+          <div class="field">
+            <label for="mileage">Rida <span class="unit">(km)</span></label>
+            <input type="number" id="mileage" placeholder="pvz. 185000" min="0" max="999999" />
+            <span class="error-msg" id="err-mileage">Įveskite 0–999 999 km</span>
+          </div>
+
+          <div class="field full">
+            <label for="faultType">Gedimo tipas</label>
+            <select id="faultType">
+              <option value="" disabled selected>— pasirinkite —</option>
+              <option value="A">A – eksploatacinis / planinis (rutininis)</option>
+              <option value="B">B – vidutinis (neplaninis, bet dažnas)</option>
+              <option value="C">C – didelis / rizikingas (variklis, važiuoklė ir pan.)</option>
+            </select>
+            <span class="error-msg" id="err-faultType">Pasirinkite gedimo tipą</span>
+          </div>
+
+          <div class="field full">
+            <label for="safetyIssue" class="label-row">Ar šis gedimas susijęs su saugumu? <button type="button" class="info-btn" id="safetyInfoBtn" aria-label="Kas laikoma saugumo gedimu?" aria-expanded="false">i</button></label>
+            <div class="tooltip" id="safetyTooltip" role="tooltip" aria-hidden="true">
+              <strong>Pavyzdžiai:</strong> stabdžiai, vairo sistema, ratų guoliai, šarnyrai, padangos, stabdžių vamzdeliai, kritinė važiuoklė.
+              <div class="muted">Jei gedimas gali sukelti pavojų eisme – rinkitės „Taip".</div>
+            </div>
+            <select id="safetyIssue">
+              <option value="" disabled selected>— pasirinkite —</option>
+              <option value="yes">Taip – saugumo komponentas (stabdžiai, vairo sistema, važiuoklė ir pan.)</option>
+              <option value="no">Ne – komforto ar techninis gedimas</option>
+            </select>
+            <span class="error-msg" id="err-safetyIssue">Pasirinkite ar gedimas susijęs su saugumu</span>
+          </div>
+
+          <div class="field full">
+            <label for="usagePlan">Kiek planuoji dar važinėti?</label>
+            <select id="usagePlan">
+              <option value="" disabled selected>— pasirinkite —</option>
+              <option value="short">Iki 6 mėn (trumpai)</option>
+              <option value="mid">6–18 mėn (vidutiniškai)</option>
+              <option value="long">18+ mėn (ilgai)</option>
+            </select>
+            <span class="error-msg" id="err-usagePlan">Pasirinkite naudojimo laikotarpį</span>
+          </div>
+
+        </div><!-- /grid -->
+
+        <div class="btn-row">
+          <button type="submit" class="btn-primary">🔍 Skaičiuoti</button>
+          <button type="button" class="btn-secondary" id="clearBtn">🗑 Išvalyti</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- RESULTS CARD -->
+    <div class="card" id="results">
+      <div class="section-title">Skaičiavimo rezultatai</div>
+
+      <!-- Verdict -->
+      <div id="verdictBox" class="verdict-box">
+        <div class="v-icon" id="vIcon"></div>
+        <div>
+          <div class="v-title" id="vTitle"></div>
+          <div class="v-sub" id="vSub"></div>
+        </div>
+      </div>
+
+      <!-- Safety warning box -->
+      <div id="safetyBox" class="safety-box" style="display:none;">
+        <div class="s-icon">⚠️</div>
+        <div>
+          <div class="s-title">Saugumo gedimas</div>
+          <div class="s-sub">
+            <div>Net jei remontas ekonomiškai nėra optimalus, saugumo komponentus būtina sutvarkyti.</div>
+            <div style="margin-top:8px; font-weight:600;">Alternatyvos:</div>
+            <ul class="safety-list">
+              <li>Atlikti minimalų remontą, kad automobilis būtų saugus</li>
+              <li>Arba parduoti automobilį po bazinio sutvarkymo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action block -->
+      <div id="actionBlock" class="action-block"></div>
+
+      <!-- Lead CTA block -->
+      <div id="leadCtaBlock" class="lead-cta-block" style="display:none;">
+        <div class="lead-cta-title" id="leadCtaTitle"></div>
+        <div class="lead-cta-text"  id="leadCtaText"></div>
+        <div class="lead-cta-actions">
+          <button type="button" class="btn-primary" id="leadCtaBtn"></button>
+        </div>
+        <div class="lead-cta-note">Nemokama. Jokių įsipareigojimų.</div>
+      </div>
+
+      <!-- Inline lead form -->
+      <div id="leadFormWrap" class="lead-form-wrap" style="display:none;">
+        <div class="lead-form-heading" id="leadFormHeading"></div>
+        <p class="lead-form-sub" id="leadFormSub"></p>
+        <form id="leadForm" novalidate autocomplete="off">
+          <div class="lead-form-grid">
+            <div class="field">
+              <label for="leadCity">Miestas <span class="unit">*</span></label>
+              <input type="text" id="leadCity" placeholder="pvz. Vilnius" />
+            </div>
+            <div class="field">
+              <label for="leadCarInfo">Automobilis <span class="unit">*</span></label>
+              <input type="text" id="leadCarInfo" placeholder="pvz. VW Golf 2012" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="leadProblem">Gedimo aprašymas <span class="unit">*</span></label>
+            <textarea id="leadProblem" rows="3" placeholder="Trumpai aprašykite gedimą ir remonto situaciją"></textarea>
+          </div>
+          <div class="field">
+            <label for="leadContact">Kontaktas (el. paštas arba tel. nr.) <span class="unit">*</span></label>
+            <input type="text" id="leadContact" placeholder="pvz. vardas@gmail.com arba +370 600 00000" />
+          </div>
+          <div class="lead-form-actions">
+            <button type="submit" class="btn-primary">Siųsti užklausą</button>
+            <button type="button" class="btn-secondary" id="leadCancelBtn">Atšaukti</button>
+          </div>
+        </form>
+        <div id="leadFormStatus" class="lead-form-status" style="display:none;"></div>
+      </div>
+
+      <!-- Summary stats -->
+      <div class="summary-bar">
+        <div class="stat-box">
+          <div class="stat-val" id="statR"></div>
+          <div class="stat-lbl">Remonto dalis nuo vertės</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="statBonus"></div>
+          <div class="stat-lbl">Papildoma rizika</div>
+        </div>
+        <div class="stat-box" style="border-color: var(--primary); background:#eff6ff;">
+          <div class="stat-val" style="color:var(--primary)" id="statRadj"></div>
+          <div class="stat-lbl">Galutinis įvertinimas</div>
+          <div class="stat-hint">Kuo mažesnis procentas, tuo labiau verta remontuoti.</div>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress-wrap">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-labels">
+          <span>0 %</span><span>30 %</span><span>45 %</span><span>60 %</span><span>100 %+</span>
+        </div>
+        <div class="progress-zones">
+          <span class="pz-good">Verta</span>
+          <span class="pz-border">Ribinis</span>
+          <span class="pz-bad">Rizika</span>
+          <span class="pz-worst">Neverta</span>
+        </div>
+      </div>
+
+      <!-- Insight block: price limits + stability + scenarios -->
+      <div id="insightBlock" class="insight-block">
+        <div id="insightLimits"></div>
+        <div id="insightStability" class="insight-stability"></div>
+        <button type="button" class="breakdown-toggle" id="scenariosToggle" aria-expanded="false" aria-controls="scenariosPanel">
+          <span id="scenariosToggleArrow">▶</span> Parodyti scenarijus
+        </button>
+        <div id="scenariosPanel" class="breakdown-panel" hidden>
+          <table class="breakdown-table" id="scenariosTable"></table>
+        </div>
+      </div>
+
+      <!-- Breakdown table (collapsible) -->
+      <button type="button" class="breakdown-toggle" id="breakdownToggle" aria-expanded="false" aria-controls="breakdownPanel">
+        <span id="breakdownToggleArrow">▶</span> Parodyti skaičiavimo detales
+      </button>
+      <div id="breakdownPanel" class="breakdown-panel" hidden>
+        <table class="breakdown-table">
+          <thead>
+            <tr>
+              <th>Komponentas</th>
+              <th>Reikšmė</th>
+              <th>Koeficientas</th>
+              <th>Vertinimas</th>
+            </tr>
+          </thead>
+          <tbody id="breakdownBody"></tbody>
+        </table>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Options -->
+      <div class="section-title">Trys galimi sprendimai</div>
+      <div class="options-grid">
+
+        <div class="option-card">
+          <div class="opt-head">
+            <span class="opt-icon">🔧</span>
+            <span class="opt-title">A. Remontuoti</span>
+          </div>
+          <ul id="optRepair"></ul>
+        </div>
+
+        <div class="option-card">
+          <div class="opt-head">
+            <span class="opt-icon">💡</span>
+            <span class="opt-title">B. Mažinti kainą</span>
+          </div>
+          <ul id="optReduce"></ul>
+        </div>
+
+        <div class="option-card">
+          <div class="opt-head">
+            <span class="opt-icon">💰</span>
+            <span class="opt-title">C. Parduoti</span>
+          </div>
+          <ul id="optSell"></ul>
+        </div>
+
+      </div>
+
+      <!-- Share -->
+      <hr class="divider" />
+      <div class="share-row">
+        <button type="button" class="btn-share" id="copyResultBtn">📋 Kopijuoti rezultatą</button>
+        <button type="button" class="btn-share" id="copyLinkBtn">🔗 Kopijuoti nuorodą</button>
+        <button type="button" class="btn-share" id="exportImgBtn">🖼 Išsaugoti kaip paveikslėlį</button>
+      </div>
+
+      <div class="btn-row" style="margin-top:20px;">
+        <button type="button" class="btn-primary" id="recalcBtn">🔄 Perskaičiuoti</button>
+        <button type="button" class="btn-secondary" id="clearBtn2">🗑 Išvalyti</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ NEXT STEPS ═══ -->
+<section class="page-section" id="next">
+  <div class="container">
+    <h2 class="section-h2">Ką daryti toliau</h2>
+    <p class="section-intro">Kad sprendimas būtų tikslesnis, verta pasitikslinti šiuos 3 dalykus.</p>
+    <div class="three-grid">
+
+      <div class="info-card">
+        <div class="info-card-num">1</div>
+        <div class="info-card-title">Patikslinkite automobilio vertę</div>
+        <ul>
+          <li>Naudokite vertės helperį (po „Automobilio vertė" lauku) – įveskite markę, metus ir ridą.</li>
+          <li>Arba palyginkite 3 panašių skelbimų kainas (metai, variklis, rida).</li>
+          <li>Vertę rinkitės realią – ne aukščiausią rinkoje.</li>
+          <li>Jei automobilis turi defektų, vertę mažinkite konservatyviai.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-num">2</div>
+        <div class="info-card-title">Patikslinkite remonto sąmatą</div>
+        <ul>
+          <li>Paprašykite sąmatos bent 2 servisuose.</li>
+          <li>Klauskite ar gali būti papildomų darbų (pvz. „kas dar dažnai išlenda?").</li>
+          <li>Jei gedimas rizikingas, planuokite atsargą.</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-card-num">3</div>
+        <div class="info-card-title">Jei svarstote parduoti</div>
+        <ul>
+          <li>Įvertinkite, ar remontas padidins pardavimo kainą (ne visada).</li>
+          <li>Jei planuojate parduoti greitai, prioritetas – saugumas ir minimalūs darbai.</li>
+          <li>Apsvarstykite pardavimą su aiškiai aprašytu defektu (sutaupysite laiką ir nervus).</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ EXAMPLES ═══ -->
+<section class="page-section section-alt" id="examples">
+  <div class="container">
+    <h2 class="section-h2">Pavyzdžiai (su realiais scenarijais)</h2>
+    <p class="section-intro">Žemiau – trys tipinės situacijos. Galite įkelti pavyzdį ir palyginti su savo atveju.</p>
+    <div class="three-grid">
+
+      <div class="example-card example-green">
+        <div class="example-tag tag-green">Verta remontuoti ✅</div>
+        <div class="example-title">Miesto automobilis</div>
+        <p class="example-desc">Trumpai: mažas remontas, planuojama važiuoti ilgiau.</p>
+        <div class="example-details">
+          <span>8 000 € vertė</span>
+          <span>600 € remontas</span>
+          <span>4 m. amžius</span>
+        </div>
+        <button type="button" class="btn-example" data-example="A">Įkelti pavyzdį →</button>
+      </div>
+
+      <div class="example-card example-yellow">
+        <div class="example-tag tag-yellow">Ribinis variantas ⚠️</div>
+        <div class="example-title">Senesnis automobilis</div>
+        <p class="example-desc">Trumpai: vidutinė remonto kaina, svarbu tikslinti sąmatą.</p>
+        <div class="example-details">
+          <span>7 000 € vertė</span>
+          <span>2 000 € remontas</span>
+          <span>11 m. amžius</span>
+        </div>
+        <button type="button" class="btn-example" data-example="B">Įkelti pavyzdį →</button>
+      </div>
+
+      <div class="example-card example-red">
+        <div class="example-tag tag-red">Ekonomiškai neverta 🚫</div>
+        <div class="example-title">Didelės rizikos situacija</div>
+        <p class="example-desc">Trumpai: didelė rida, rizikingas gedimas, planuojamas trumpas naudojimas.</p>
+        <div class="example-details">
+          <span>4 000 € vertė</span>
+          <span>2 500 € remontas</span>
+          <span>18 m. amžius</span>
+        </div>
+        <button type="button" class="btn-example" data-example="C">Įkelti pavyzdį →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="page-section" id="how">
+  <div class="container">
+    <h2 class="section-h2">Kaip veikia skaičiuoklė</h2>
+    <p class="section-intro">Skaičiuoklė pirmiausia lygina remonto kainą su automobilio rinkos verte. Tuomet prideda papildomą riziką, kuri priklauso nuo automobilio amžiaus, ridos, gedimo tipo ir planuojamo naudojimo.</p>
+    <div class="how-grid">
+      <div class="how-item">
+        <div class="how-icon">📊</div>
+        <div>
+          <strong>Remonto dalis nuo vertės</strong>
+          <p>Kuo didesnė dalis, tuo mažiau apsimoka. Tai pagrindinis rodiklis.</p>
+        </div>
+      </div>
+      <div class="how-item">
+        <div class="how-icon">⚙️</div>
+        <div>
+          <strong>Papildoma rizika</strong>
+          <p>Senesniems, daug nuvažiavusiems ar rizikingiems gedimams sprendimas griežtėja.</p>
+        </div>
+      </div>
+      <div class="how-item">
+        <div class="how-icon">📅</div>
+        <div>
+          <strong>Planavimo logika</strong>
+          <p>Jei planuojate važiuoti ilgai, investicija dažniau pasiteisina.</p>
+        </div>
+      </div>
+    </div>
+    <p class="how-note">Rezultatas yra ekonominis orientyras. Jeigu sprendimas „ant ribos", rekomenduojame patikslinti sąmatą ir vertę.</p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="page-section section-alt" id="faq">
+  <div class="container">
+    <h2 class="section-h2">Dažniausiai užduodami klausimai</h2>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>Kada dažniausiai neapsimoka remontuoti automobilio?</summary>
+        <div class="faq-body">Dažniausiai tada, kai remonto kaina sudaro didelę dalį automobilio vertės, o papildoma rizika (amžius, rida, gedimo tipas) yra didelė. Tokiu atveju sprendimas dažnai būna „parduoti" arba ieškoti alternatyvos.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kiek verta investuoti į automobilio remontą?</summary>
+        <div class="faq-body">Universalios ribos nėra, bet ekonomiškai dažnai saugiau, kai remontas sudaro mažesnę dalį automobilio vertės. Skaičiuoklė padeda tą ribą pamatyti jūsų situacijoje.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Kodėl rezultatas keičiasi nuo amžiaus ar ridos?</summary>
+        <div class="faq-body">Nes senesniems automobiliams su didele rida dažniau pasitaiko papildomų gedimų, todėl rizika, kad remontas „brangs", yra didesnė.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Ką reiškia „Papildoma rizika"?</summary>
+        <div class="faq-body">Tai procentinis priedas, kuris atspindi tikimybę, kad remontas taps brangesnis ar ekonomiškai mažiau prasmingas dėl bendros automobilio būklės ir planų.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Ar verta remontuoti automobilį, jei planuoju jį parduoti greitai?</summary>
+        <div class="faq-body">Dažnai verta tik minimaliai: saugumo ir būtinus darbus. Didelės investicijos prieš greitą pardavimą retai atsiperka.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Ką daryti, jei nežinau automobilio rinkos vertės?</summary>
+        <div class="faq-body">Naudokite vertės helperį po „Automobilio vertė" lauku – įveskite markę, metus ir ridą, ir gausite orientacinę rinkos vertę. Arba palyginkite 3 panašius skelbimus ir naudokite medianą (vidurinę kainą). Jei automobilis turi defektų – vertę pasirinkite konservatyviai.</div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="footer-brand">🚗 Ar verta remontuoti?</span>
+    <p class="footer-note">Orientacinis įrankis. Skaičiavimai atliekami jūsų naršyklėje. Pateikiant užklausą, kontaktiniai duomenys išsaugomi saugiai.</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!--
+  OG PREVIEW CARD — used to generate og-preview.png (1200×630)
+  This element is hidden in the live UI (display:none).
+
+  To generate og-preview.png:
+    1. Open index.html in a browser (file:// or local server)
+    2. Open DevTools console and run:
+         document.getElementById('ogPreview').style.display = 'flex'
+    3. In DevTools → Elements, right-click #ogPreview → "Capture node screenshot"
+       OR take a 1200×630 browser screenshot of the element
+    4. Save as og-preview.png and place in the project root
+-->
+<div id="ogPreview" class="og-preview" aria-hidden="true">
+  <div class="og-card">
+    <div class="og-brand">arvertaremontuoti.lt</div>
+    <div class="og-title">🚗 Ar verta remontuoti automobilį?</div>
+    <div class="og-subtitle">Greitai įvertinkite, ar automobilio remontas ekonomiškai apsimoka</div>
+    <ul class="og-features">
+      <li>✔ Įvertina remonto kainą lyginant su automobilio verte</li>
+      <li>✔ Atsižvelgia į amžių, ridą ir gedimo tipą</li>
+      <li>✔ Parodo aiškų sprendimą su konkrečiais veiksmais</li>
+    </ul>
+    <div class="og-badges">
+      <span class="og-badge og-badge-green">✅ Verta remontuoti</span>
+      <span class="og-badge og-badge-yellow">⚠️ Ribinis variantas</span>
+      <span class="og-badge og-badge-red">🚫 Ekonomiškai neverta</span>
+    </div>
+    <div class="og-footer">Nemokama skaičiuoklė · Visi skaičiavimai naršyklėje</div>
+  </div>
+</div>
+
+<!-- Export card (hidden, rendered to PNG on demand) -->
+<div id="exportCard" class="export-card" aria-hidden="true">
+  <div class="export-header">🚗 Ar verta remontuoti automobilį?</div>
+  <div id="exportVerdict" class="export-verdict"></div>
+  <div class="export-score">
+    <div class="export-score-label">Galutinis įvertinimas</div>
+    <div id="exportPercent" class="export-percent"></div>
+  </div>
+  <div class="export-values">
+    <div class="export-value-item">
+      <div class="export-label">Remonto kaina</div>
+      <div id="exportRepair" class="export-value-num"></div>
+    </div>
+    <div class="export-value-item">
+      <div class="export-label">Automobilio vertė</div>
+      <div id="exportValue" class="export-value-num"></div>
+    </div>
+    <div class="export-value-item">
+      <div class="export-label">Papildoma rizika</div>
+      <div id="exportBonus" class="export-value-num"></div>
+    </div>
+  </div>
+  <div id="exportExplanation" class="export-explanation"></div>
+  <div id="exportRecommendation" class="export-recommendation"></div>
+  <div class="export-footer">arvertaremontuoti.lt</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
