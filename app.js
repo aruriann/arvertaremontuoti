@@ -629,9 +629,17 @@ function buildLeadPayload(extra) {
   };
 }
 
+// Locally, the frontend and backend run on different ports, so we need an
+// absolute URL. In production, nginx proxies /api/* to Node.js on the same
+// domain, so a relative URL works without any change to this code.
+const API_BASE_URL = (
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1'
+) ? 'http://localhost:3000' : '';
+
 async function submitLead(payload) {
   try {
-    const res  = await fetch('/api/leads', {
+    const res  = await fetch(`${API_BASE_URL}/api/leads`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify(payload),

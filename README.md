@@ -2,7 +2,7 @@
 
 Calculator that helps drivers decide if repairing a car is economically worth it.
 
-**Live site:** [arvertaremontuoti.lt](https://arvertaremontuoti.lt)
+**Domain:** arvertaremontuoti.lt (not yet deployed)
 
 ## Stack
 
