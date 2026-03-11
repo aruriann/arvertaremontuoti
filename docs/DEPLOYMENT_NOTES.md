@@ -45,14 +45,33 @@ arvertaremontuoti/          ← repo root
 Frontend is served by VS Code Live Server (or any static server) on port 5500.
 Backend runs on port 3000.
 
-Because the frontend uses a relative URL `/api/leads`, a direct browser request
-to the frontend on port 5500 will fail to reach the backend on port 3000 —
-browsers block cross-origin requests unless CORS is configured.
+`app.js` uses a runtime check to pick the right API base URL:
 
-**Solution for local dev:** set `FRONTEND_ORIGIN` in `backend/.env` to match
-the Live Server origin, and keep CORS enabled in `backend/src/app.js`.
-The hardcoded `http://localhost:3000` is gone — the relative URL `/api/leads`
-is used everywhere. This works in production without any change.
+```js
+const API_BASE_URL =
+  window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:3000'
+    : '';
+```
+
+- **Locally:** frontend is on port 5500, backend on port 3000 — different origins.
+  `API_BASE_URL` becomes `http://localhost:3000`, so the fetch goes directly to
+  the backend. CORS allows this because `FRONTEND_ORIGIN=http://127.0.0.1:5500`
+  is set in `backend/.env`.
+
+- **Production:** frontend and API are on the same domain via nginx proxy.
+  `API_BASE_URL` becomes `""`, so the fetch uses a relative `/api/leads` URL.
+  nginx routes `/api/` to Node.js on `localhost:3000`. No CORS headers needed —
+  it is a same-origin request from the browser's perspective.
+
+**`FRONTEND_ORIGIN` values:**
+
+| Environment | Value |
+|---|---|
+| Local dev | `http://127.0.0.1:5500` |
+| Production | `https://arvertaremontuoti.lt` |
+
+Set the correct value in `backend/.env` for each environment.
 
 ### Start backend locally
 
@@ -143,9 +162,9 @@ server {
 }
 ```
 
-With this setup, `/api/leads` in the browser resolves correctly on both:
-- local (through CORS + direct backend call)
-- production (through nginx proxy — same relative URL, no code change needed)
+With this setup, API calls work correctly in both environments with no code
+changes at deploy time — `API_BASE_URL` in `app.js` handles the difference
+automatically based on `window.location.hostname`.
 
 ---
 

@@ -10,10 +10,14 @@ import errorHandler from './middleware/errorHandler.js';
 
 const app = express();
 
+// Trust the first proxy (nginx). Required for rate limiting and IP logging
+// to work correctly when running behind a reverse proxy on Hetzner VPS.
+app.set('trust proxy', 1);
+
 app.use(helmet());
 app.use(cors({ origin: process.env.FRONTEND_ORIGIN }));
 app.use(express.json({ limit: '100kb' }));
-app.use(morgan('dev'));
+app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
 app.use('/api/health', healthRouter);
 app.use('/api/leads', leadsRouter);
